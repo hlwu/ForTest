@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fortest.hlwu.com.fortest.MainActivity">
+
+    <Button
+        android:id="@+id/start_life_cycle_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="start life cycle activity"
+        app:layout_constraintTop_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/start_life_cycle_button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="start Thread test"
+        app:layout_constraintTop_toBottomOf="@+id/start_life_cycle_button"/>
+
+    <Button
+        android:id="@+id/start_life_cycle_button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="start java value transfer test"
+        app:layout_constraintTop_toBottomOf="@+id/start_life_cycle_button2"/>
+
+</android.support.constraint.ConstraintLayout>
