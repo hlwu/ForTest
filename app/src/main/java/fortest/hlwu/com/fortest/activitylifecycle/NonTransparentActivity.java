@@ -1,10 +1,14 @@
 package fortest.hlwu.com.fortest.activitylifecycle;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.ViewStubCompat;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import fortest.hlwu.com.fortest.R;
@@ -14,13 +18,21 @@ import fortest.hlwu.com.fortest.R;
  */
 
 public class NonTransparentActivity extends AppCompatActivity {
+    @SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_for_life_cycle_2);
         getSupportActionBar().setTitle("NonTransparentActivity");
         ((TextView) findViewById(R.id.life_cycle2_text)).setText("NonTransparentActivity's Text");
-        Log.d("flaggg", "NonTransparentActivity.onCreate");
+        View stub = ((ViewStubCompat) findViewById(R.id.life_cycle2_stub)).inflate();
+        ((Button) stub.findViewById(R.id.view_stub_button)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(NonTransparentActivity.this, LifeCycleActivity.class));
+            }
+        });
+        Log.d("flaggg", "NonTransparentActivity.onCreate task: " + getTaskId());
     }
 
     @Override

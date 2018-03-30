@@ -1,10 +1,13 @@
 package fortest.hlwu.com.fortest.activitylifecycle;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.ViewStubCompat;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import fortest.hlwu.com.fortest.R;

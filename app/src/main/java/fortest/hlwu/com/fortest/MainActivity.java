@@ -3,6 +3,7 @@ package fortest.hlwu.com.fortest;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().setTitle("MainActivity");
+        Log.d("flaggg", "MainActivity.onCreate task: " + getTaskId());
         ((Button) findViewById(R.id.start_life_cycle_button)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -24,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ((Button) findViewById(R.id.start_life_cycle_button2)).setOnClickListener(new View.OnClickListener() {
+        ((Button) findViewById(R.id.start_thread_test_button2)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 //                new MyThreadTest().run3ThreadWithLock();   //使用lock
@@ -34,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ((Button) findViewById(R.id.start_life_cycle_button3)).setOnClickListener(new View.OnClickListener() {
+        ((Button) findViewById(R.id.start_value_transfer_button3)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 new ValueTransfer().valueTest();

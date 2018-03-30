@@ -15,17 +15,17 @@
         app:layout_constraintTop_toBottomOf="parent"/>
 
     <Button
-        android:id="@+id/start_life_cycle_button2"
+        android:id="@+id/start_thread_test_button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="start Thread test"
         app:layout_constraintTop_toBottomOf="@+id/start_life_cycle_button"/>
 
     <Button
-        android:id="@+id/start_life_cycle_button3"
+        android:id="@+id/start_value_transfer_button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="start java value transfer test"
-        app:layout_constraintTop_toBottomOf="@+id/start_life_cycle_button2"/>
+        app:layout_constraintTop_toBottomOf="@+id/start_thread_test_button2"/>
 
 </android.support.constraint.ConstraintLayout>

@@ -17,7 +17,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activitylifecycle.LifeCycleActivity" />
+        <activity
+            android:name=".activitylifecycle.LifeCycleActivity"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.hlwu.test.task1"
+            android:configChanges="orientation|screenSize"/>
         
         <activity
             android:name=".activitylifecycle.TransparentActivity"
