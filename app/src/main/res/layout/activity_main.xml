@@ -22,11 +22,18 @@
         app:layout_constraintTop_toBottomOf="@id/start_life_cycle_button"/>
 
     <Button
+        android:id="@+id/start_thread_test_button2_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="start Thread test 2"
+        app:layout_constraintTop_toBottomOf="@id/start_thread_test_button2"/>
+
+    <Button
         android:id="@+id/start_value_transfer_button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="start java value transfer test"
-        app:layout_constraintTop_toBottomOf="@id/start_thread_test_button2"/>
+        app:layout_constraintTop_toBottomOf="@id/start_thread_test_button2_2"/>
 
     <Button
         android:id="@+id/start_new_process_button4"
@@ -48,5 +55,14 @@
         android:layout_height="wrap_content"
         android:text="unbind MyTestService"
         app:layout_constraintTop_toBottomOf="@id/bind_service_button5"/>
+
+    <Button
+        android:id="@+id/run_linked_list_button7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="run linked list"
+        app:layout_constraintTop_toBottomOf="@id/unbind_service_button6"/>
+
+
 
 </android.support.constraint.ConstraintLayout>

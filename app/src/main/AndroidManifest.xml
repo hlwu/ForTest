@@ -32,7 +32,7 @@
 
         <activity android:name=".multi_process.NewProcessActivity" android:process=":remoute111"/>
 
-        <service android:name=".aidl.MyTestServiceWithAidl"/>
+        <service android:name=".aidlAndService.MyTestServiceWithAidl" android:process=":remounte111"/>
     </application>
 
 </manifest>
