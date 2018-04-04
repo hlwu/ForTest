@@ -63,6 +63,13 @@
         android:text="run linked list"
         app:layout_constraintTop_toBottomOf="@id/unbind_service_button6"/>
 
+    <Button
+        android:id="@+id/run_socket_button8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="socket test"
+        app:layout_constraintTop_toBottomOf="@id/run_linked_list_button7"/>
+
 
 
 </android.support.constraint.ConstraintLayout>

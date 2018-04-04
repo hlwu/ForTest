@@ -2,6 +2,8 @@
 <manifest package="fortest.hlwu.com.fortest"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -30,9 +32,13 @@
 
         <activity android:name=".activitylifecycle.NonTransparentActivity"/>
 
-        <activity android:name=".multi_process.NewProcessActivity" android:process=":remoute111"/>
+        <activity android:name=".multi_process.NewProcessActivity" android:process=":remote"/>
 
-        <service android:name=".aidlAndService.MyTestServiceWithAidl" android:process=":remounte111"/>
+        <service android:name=".aidlAndService.MyTestServiceWithAidl" android:process=":remote"/>
+
+        <activity android:name=".socket.ClientActivity"/>
+
+        <service android:name=".socket.TCPServerService" android:process=":remote"/>
     </application>
 
 </manifest>

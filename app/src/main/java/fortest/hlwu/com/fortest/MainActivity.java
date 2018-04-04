@@ -22,6 +22,7 @@ import fortest.hlwu.com.fortest.aidl.IMyTestAidlInterface;
 import fortest.hlwu.com.fortest.aidlAndService.MyTestServiceWithAidl;
 import fortest.hlwu.com.fortest.linkedlist.MyLinkedList;
 import fortest.hlwu.com.fortest.multi_process.NewProcessActivity;
+import fortest.hlwu.com.fortest.socket.ClientActivity;
 import fortest.hlwu.com.fortest.thread_synchronized.MyThreadTest;
 import fortest.hlwu.com.fortest.thread_synchronized.MyThreadTest2;
 import fortest.hlwu.com.fortest.valuetransfer.ValueTransfer;
@@ -184,6 +185,13 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("flaggg", "delete node at 1");
                 mll.deleteNodeAt(1);
                 mll.printList();
+            }
+        });
+
+        ((Button) findViewById(R.id.run_socket_button8)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ClientActivity.class));
             }
         });
     }
