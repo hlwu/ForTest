@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             switch (msg.what) {
                 case 2:
                     if (activityWeekReference.get() != null) {
-                        Log.d("flaggg", msg.getData().getString("msg", "default string at client"));
+                        Log.d("flaggg", msg.getData().getString("msg", "default string at client."));
                     } else {
                         Log.d("flaggg", "MainActivity has already destroyed");
                     }
