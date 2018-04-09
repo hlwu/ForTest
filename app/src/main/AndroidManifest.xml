@@ -41,6 +41,8 @@
         <service android:name=".socket.TCPServerService" android:process=":remote"/>
 
         <activity android:name=".view.ViewTestActivity"/>
+
+        <activity android:name=".view.ViewTestActivityToInterceptTouchEvent"/>
     </application>
 
 </manifest>

@@ -27,6 +27,7 @@ import fortest.hlwu.com.fortest.thread_synchronized.MyThreadTest;
 import fortest.hlwu.com.fortest.thread_synchronized.MyThreadTest2;
 import fortest.hlwu.com.fortest.valuetransfer.ValueTransfer;
 import fortest.hlwu.com.fortest.view.ViewTestActivity;
+import fortest.hlwu.com.fortest.view.ViewTestActivityToInterceptTouchEvent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -200,6 +201,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, ViewTestActivity.class));
+            }
+        });
+
+        ((Button) findViewById(R.id.view_test_button10)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ViewTestActivityToInterceptTouchEvent.class));
             }
         });
     }
