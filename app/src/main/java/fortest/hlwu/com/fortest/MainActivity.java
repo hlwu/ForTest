@@ -26,6 +26,7 @@ import fortest.hlwu.com.fortest.socket.ClientActivity;
 import fortest.hlwu.com.fortest.thread_synchronized.MyThreadTest;
 import fortest.hlwu.com.fortest.thread_synchronized.MyThreadTest2;
 import fortest.hlwu.com.fortest.valuetransfer.ValueTransfer;
+import fortest.hlwu.com.fortest.view.ViewTestActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -192,6 +193,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, ClientActivity.class));
+            }
+        });
+
+        ((Button) findViewById(R.id.view_test_button9)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ViewTestActivity.class));
             }
         });
     }

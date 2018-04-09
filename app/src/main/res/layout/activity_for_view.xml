@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/view_test_tv"
+        android:layout_width="238dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <Button
+        android:id="@+id/view_test_move_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp" android:layout_marginTop="72dp"
+        android:text="scrollBy(20,0)" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <Button
+        android:id="@+id/view_test_move_btn_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginEnd="56dp"
+        android:layout_marginTop="72dp" android:text="scrollBy(-20,0)"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+    <Button
+        android:id="@+id/view_test_move_btn_3"
+        android:layout_width="271dp"
+        android:layout_height="46dp" android:layout_marginStart="52dp"
+        android:layout_marginTop="148dp" android:text="translationX 100"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+    <Button
+        android:id="@+id/view_test_move_btn_4"
+        android:layout_width="270dp"
+        android:layout_height="43dp" android:layout_marginStart="52dp"
+        android:layout_marginTop="204dp" android:text="change laytou params"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+    <Button
+        android:id="@+id/view_test_follow_finger_btn_5"
+        android:layout_width="269dp"
+        android:layout_height="wrap_content" android:layout_marginStart="40dp"
+        android:layout_marginTop="264dp" android:text="follow finger"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+    <Button
+        android:id="@+id/view_test_valueanimation_move_btn_6"
+        android:layout_width="270dp"
+        android:layout_height="35dp" android:layout_marginStart="52dp"
+        android:layout_marginTop="324dp" android:text="ValueAnimation move"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+    <fortest.hlwu.com.fortest.view.MyLinearLayout
+        android:id="@+id/view_test_ll"
+        android:layout_width="365dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/holo_blue_light"
+        android:layout_marginTop="376dp" android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <fortest.hlwu.com.fortest.view.MyButton
+            android:id="@+id/view_test_ll_mybtn_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="Touch Event Btn"/>
+        <fortest.hlwu.com.fortest.view.MyButton2
+            android:id="@+id/view_test_ll_mybtn_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="Touch Event Btn2"/>
+    </fortest.hlwu.com.fortest.view.MyLinearLayout>
+</android.support.constraint.ConstraintLayout>

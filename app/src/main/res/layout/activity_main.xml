@@ -70,6 +70,11 @@
         android:text="socket test"
         app:layout_constraintTop_toBottomOf="@id/run_linked_list_button7"/>
 
-
+    <Button
+        android:id="@+id/view_test_button9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="view test"
+        app:layout_constraintTop_toBottomOf="@id/run_socket_button8"/>
 
 </android.support.constraint.ConstraintLayout>
