@@ -26,10 +26,10 @@ public class MyLinearLayoutToInterceptTouchEvent extends HorizontalScrollView {
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-        Log.d("flaggg", "MyLinearLayoutToInterceptTouchEvent.onInterceptTouchEvent");
         boolean intercept = false;
         float x = ev.getRawX();
         float y = ev.getRawY();
+        Log.d("flaggg", "MyLinearLayoutToInterceptTouchEvent.onInterceptTouchEvent ev: " + ev.getAction() + "; x: " + x + "; y: " + y);
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 break;
@@ -44,7 +44,7 @@ public class MyLinearLayoutToInterceptTouchEvent extends HorizontalScrollView {
         }
         mLastX = x;
         mLastY = y;
-        boolean flag = super.onInterceptTouchEvent(ev) && intercept;
+        boolean flag = super.onInterceptTouchEvent(ev) || intercept;
         Log.d("flaggg", "MyLinearLayoutToInterceptTouchEvent.onInterceptTouchEvent, return: " + flag);
         return flag;
     }

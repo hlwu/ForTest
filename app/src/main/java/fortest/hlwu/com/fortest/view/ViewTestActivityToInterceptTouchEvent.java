@@ -3,6 +3,8 @@ package fortest.hlwu.com.fortest.view;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -34,19 +36,28 @@ public class ViewTestActivityToInterceptTouchEvent extends Activity {
         resetListViewHeight(adapter, (ListView) findViewById(R.id.view_test_list_1));
         resetListViewHeight(adapter, (ListView) findViewById(R.id.view_test_list_2));
         resetListViewHeight(adapter, (ListView) findViewById(R.id.view_test_list_3));
+
+//        ((ListView) findViewById(R.id.view_test_list_1)).setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                Log.d("flaggg", "list 1 onTouch ev: " + event.getAction());
+//                return false;
+//            }
+//        });
     }
 
     private void resetListViewHeight(ArrayAdapter<String> adapter, ListView listView) {
-        int totalHeight = 0;                                    // 定义、初始化listview总高度值
-        for (int i = 0; i < adapter.getCount(); i++) {
-            View listItem = adapter.getView(i, null, listView);          // 获取单个item
-            listItem.setLayoutParams(new ViewGroup.LayoutParams(
-                    ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));// 设置item高度为适应内容
-            listItem.measure(0, 0);                                        // 测量现在item的高度
-            totalHeight += listItem.getMeasuredHeight();                   // 总高度增加一个listitem的高度
-        }
+//        int totalHeight = 0;                                    // 定义、初始化listview总高度值
+//        for (int i = 0; i < adapter.getCount(); i++) {
+//            View listItem = adapter.getView(i, null, listView);          // 获取单个item
+//            listItem.setLayoutParams(new ViewGroup.LayoutParams(
+//                    ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));// 设置item高度为适应内容
+//            listItem.measure(0, 0);                                        // 测量现在item的高度
+//            totalHeight += listItem.getMeasuredHeight();                   // 总高度增加一个listitem的高度
+//        }
         ViewGroup.LayoutParams params = listView.getLayoutParams();
-        params.height = totalHeight + (listView.getDividerHeight() * (adapter.getCount() - 1)); // 将分割线高度加上总高度作为最后listview的高度
+//        params.height = totalHeight + (listView.getDividerHeight() * (adapter.getCount() - 1)); // 将分割线高度加上总高度作为最后listview的高度
+        params.height = getWindowManager().getDefaultDisplay().getHeight();
         listView.setLayoutParams(params);
     }
 }
