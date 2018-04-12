@@ -84,4 +84,11 @@
         android:text="view test to intercept touch event"
         app:layout_constraintTop_toBottomOf="@id/view_test_button9"/>
 
+    <Button
+        android:id="@+id/start_constraint_activity_button11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="start constraint activity"
+        app:layout_constraintTop_toBottomOf="@id/view_test_button10"/>
+
 </android.support.constraint.ConstraintLayout>

@@ -20,6 +20,7 @@ import java.lang.ref.WeakReference;
 import fortest.hlwu.com.fortest.activitylifecycle.LifeCycleActivity;
 import fortest.hlwu.com.fortest.aidl.IMyTestAidlInterface;
 import fortest.hlwu.com.fortest.aidlAndService.MyTestServiceWithAidl;
+import fortest.hlwu.com.fortest.constaintlayout_animation.ConstraintActivity;
 import fortest.hlwu.com.fortest.linkedlist.MyLinkedList;
 import fortest.hlwu.com.fortest.multi_process.NewProcessActivity;
 import fortest.hlwu.com.fortest.socket.ClientActivity;
@@ -208,6 +209,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, ViewTestActivityToInterceptTouchEvent.class));
+            }
+        });
+
+        ((Button) findViewById(R.id.start_constraint_activity_button11)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ConstraintActivity.class));
             }
         });
     }

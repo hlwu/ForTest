@@ -43,6 +43,8 @@
         <activity android:name=".view.ViewTestActivity"/>
 
         <activity android:name=".view.ViewTestActivityToInterceptTouchEvent"/>
+
+        <activity android:name=".constaintlayout_animation.ConstraintActivity"/>
     </application>
 
 </manifest>
